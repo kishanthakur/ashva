@@ -1,0 +1,98 @@
+.sidebar {
+  width: 300px;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background-color: gray; 
+
+  .date-selector {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 1rem;
+
+    &__input {
+      margin-right: 1rem; 
+    }
+
+    &__button {
+      flex: 1;
+      padding: 0.5rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &.active {
+        background-color: yellow;
+      }
+
+      &__icon {
+        width: 24px; 
+        height: 24px; 
+      }
+    }
+  }
+
+  &__search {
+    width: 100%; 
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+  }
+
+  .content-wrapper {
+    display: flex;
+    height: calc(100vh - 2rem);
+    overflow: hidden;
+
+    .countries-list {
+      flex: 1;
+
+      .country-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        &__logo {
+          margin-right: 0.5rem;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    .races-list {
+      flex: 7;
+      width: 250px; 
+      overflow-y: auto;
+
+      .race-item {
+        border: 1px solid #ddd;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+
+        .race-header {
+          display: flex;
+          justify-content: space-between;
+
+          .race-country-flag {
+            width: 24px;   // Adjust as needed
+            height: 24px;  // Adjust as needed
+          }
+
+          .race-name {
+            font-weight: bold;
+          }
+        }
+
+        .race-footer {
+          position: absolute;
+          bottom: 0.5rem;
+          left: 1rem;
+        }
+      }
+    }
+  }
+}

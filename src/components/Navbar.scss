@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(208, 150, 150);
+  padding: 1rem 2rem;
+
+  &__logo,
+  &__nav-image,
+  &__right-image {
+    margin-right: 1rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__nav-images {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+
+    &__nav-images {
+      margin-top: 0.5rem;
+    }
+  }
+}
